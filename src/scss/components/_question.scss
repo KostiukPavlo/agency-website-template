@@ -1,0 +1,124 @@
+.question {
+  .row {
+    align-items: center;
+    padding: 30px 0;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+  &_image {
+    max-width: 600px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+  &_image-mob {
+    display: none;
+
+    @include small-tablet {
+      margin-top: 32px;
+      display: block;
+    }
+  }
+
+  .max-width {
+    max-width: 491px;
+  }
+  &_title {
+    margin-bottom: 10px;
+
+    @include small-tablet {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+
+  &_text {
+    color: #999999;
+    margin-bottom: 20px;
+  }
+
+  .accordion {
+    background: linear-gradient(90deg, #ff6800 0%, #ff1f00 100%);
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transition: all 0.5s;
+    position: relative;
+
+    span {
+      display: block;
+      max-width: 90%;
+    }
+    @include small-tablet {
+      min-height: 60px;
+    }
+  }
+  .accordion:hover {
+    background: #ffffff;
+    border: 2px solid #ff6800;
+    color: #ff1f00;
+    transition: all 0.5s;
+  }
+
+  .active {
+    background: #fff;
+    border-radius: 15px 15px 0 0;
+    border: 2px solid #ff6800;
+    color: #333333;
+    border-bottom: none;
+    margin-bottom: 0;
+    transition: all 0.3s;
+  }
+  .active:hover {
+    border-bottom: none;
+  }
+
+  .accordion:after {
+    content: "\002B";
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 300;
+    float: right;
+    margin-left: 5px;
+    position: absolute;
+    right: 10px;
+    top: 30%;
+  }
+  .accordion:hover:after {
+    color: #ff1f00;
+  }
+
+  .active:after {
+    content: "\2212";
+    color: #333333;
+  }
+
+  .panel {
+    border-radius: 0 0 15px 15px;
+
+    border: none;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 12px;
+    transition: max-height 0.2s;
+    &-active {
+      border: 2px solid #ff6800;
+      border-top: none;
+      padding: 20px;
+    }
+  }
+}

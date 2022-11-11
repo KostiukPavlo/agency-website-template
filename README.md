@@ -1,0 +1,1 @@
+Trainee WordPress developer

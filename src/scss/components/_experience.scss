@@ -1,0 +1,88 @@
+.experience {
+  background-image: url(../img/high_quality-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 560px;
+  width: 100%;
+
+  @include tablet {
+    height: auto;
+  }
+
+  .row {
+    align-items: center;
+    padding: 54px 0;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+  &_image {
+    max-width: 588px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &_image-mobile {
+    display: none;
+
+    @include small-tablet {
+      display: block;
+      margin-top: 32px;
+    }
+  }
+
+  .max-width {
+    max-width: 488px;
+  }
+  &_title {
+    color: #ffffff;
+    margin-bottom: 10px;
+
+    @include small-tablet {
+      text-align: center;
+    }
+  }
+  &_text {
+    color: #cccccc;
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+  }
+  .progress-bar {
+    background-color: #ffe0cb;
+    border-radius: 1000px;
+    appearance: none;
+    width: 380px;
+    height: 8px;
+    border: none;
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+  .progress-bar-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #cccccc;
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+  .progress-bar-text:first-child {
+    margin-top: 0;
+  }
+  .progress {
+    background: linear-gradient(90deg, #ff6800 0%, #ff1f00 100%);
+    border-radius: 1000px;
+    height: 8px;
+    width: 0;
+    transition: width 0.5s ease-in;
+  }
+}

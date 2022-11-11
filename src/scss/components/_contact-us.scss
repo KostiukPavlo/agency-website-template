@@ -1,0 +1,29 @@
+.contact-us {
+  height: 410px;
+  background-image: url(../img/contact_us-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .container,
+  .row {
+    height: 100%;
+  }
+
+  .col {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_title {
+    color: #ffffff;
+    max-width: 462px;
+    margin-bottom: 16px;
+
+    @include small-tablet {
+      max-width: 300px;
+    }
+  }
+}

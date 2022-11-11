@@ -1,0 +1,80 @@
+.footer {
+  height: 104px;
+  font-size: 14px;
+  background: #333333;
+  color: #ffffff;
+  .container,
+  .row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include tablet {
+    iframe {
+      height: 400px;
+    }
+  }
+  @include tablet {
+    iframe {
+      height: 400px;
+    }
+  }
+  @include small-tablet {
+    iframe {
+      height: 320px;
+    }
+  }
+
+  .modal_form {
+    color: #000;
+    max-width: 400px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 47px;
+
+    label {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      padding-left: 20px;
+      height: 56px;
+      border-radius: 15px;
+      background: #ffffff;
+      border: 1px solid #ff2302;
+    }
+  }
+
+  input.modal_form_submit {
+    margin-top: 45px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 47px;
+    color: #ff2302;
+    background-clip: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    border-radius: 15px;
+    background: #ffffff;
+    border: 1px solid #ff2302;
+    transition: all 0.3s;
+    padding: 0;
+
+    &:hover {
+      cursor: pointer;
+      color: #ffffff;
+      background: #ff2302;
+    }
+  }
+  .graph-modal__container {
+    padding: 30px;
+  }
+  .width-auto {
+    width: auto;
+  }
+}

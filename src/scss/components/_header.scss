@@ -1,0 +1,43 @@
+.header {
+  background-image: url(../img/svg/header_bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 887px;
+  width: 100%;
+
+  .row {
+    padding-top: 160px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+
+    &.justify-content {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-title {
+    margin: 0;
+    max-width: 448px;
+    color: #ffffff;
+    padding-bottom: 20px;
+
+    @include small-tablet {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+
+  &-btn {
+    @include small-tablet {
+      margin: 0 auto 84px;
+    }
+  }
+
+  &-img {
+    max-width: 490px;
+  }
+}

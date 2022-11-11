@@ -1,0 +1,54 @@
+.features {
+  text-align: center;
+  margin-top: 58px;
+  margin-bottom: 58px;
+
+  @include small-tablet {
+    margin-top: 100px;
+  }
+  .grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 32px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 32px 40px 0;
+    }
+  }
+
+  &_title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &_subtitle {
+    text-align: center;
+  }
+  &_card {
+    min-height: 300px;
+    padding: 40px;
+    background: #fafafa;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+
+    @include small-tablet {
+      min-height: auto;
+    }
+  }
+  &_card-img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+  &_card-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &_card-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #808080;
+  }
+}

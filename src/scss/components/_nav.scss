@@ -1,0 +1,91 @@
+.burger {
+  @include burger;
+  height: 20px;
+  z-index: 999;
+}
+.nav {
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 160px;
+    height: 36px;
+    display: block;
+  }
+  .burger__line {
+    width: 23.49px;
+    border-radius: 2px;
+  }
+  .burger__line.endline {
+    width: 23.49px;
+  }
+  .burger::before,
+  .burger::after {
+    width: 30.21px;
+    border-radius: 2px;
+  }
+
+  .burger::before {
+    top: 0;
+  }
+  .burger__line {
+    width: 23.49px;
+    left: 6.72px;
+    top: 6px;
+  }
+  .burger::after {
+    top: 10px;
+  }
+  .burger__line.endline {
+    left: 6.72px;
+    top: 16px;
+  }
+
+  .burger::before,
+  .burger::after,
+  .burger__line {
+    color: #ffffff;
+  }
+  .burger--active .burger__line {
+    display: none;
+  }
+  .burger--active::before,
+  .burger--active::after {
+    top: 20%;
+    left: -10px;
+    color: #000000;
+  }
+  .nav_list {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    z-index: 10;
+    overflow: hidden;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+
+    ul {
+      margin-top: 80px;
+    }
+  }
+
+  .nav_list.menu--active {
+    width: 50%;
+    height: 100%;
+  }
+}

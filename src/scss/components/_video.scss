@@ -1,0 +1,29 @@
+.video {
+  height: 600px;
+  background-image: url(../img/video_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include big-desktop {
+    height: 400px;
+  }
+  @include small-tablet {
+    height: 320px;
+  }
+  .container,
+  .row {
+    height: 100%;
+  }
+  .row {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video_btn {
+    transition: all 0.3s;
+  }
+  .video_btn:hover {
+    transform: scale(1.1);
+  }
+}
