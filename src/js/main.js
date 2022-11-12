@@ -32,3 +32,16 @@ for (i = 0; i < acc.length; i++) {
 }
 
 // accordion end
+
+// close menu when click link
+const menuList = document.querySelectorAll(".menu-item a");
+const nav_list = document.querySelector(".nav_list");
+const nav_btn = document.querySelector(".nav_btn");
+
+for (i = 0; i < menuList.length; i++) {
+  menuList[i].addEventListener("click", function () {
+    nav_list.classList.remove("menu--active");
+    nav_btn.classList.remove("burger--active");
+  });
+}
+// close menu when click link end

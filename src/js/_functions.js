@@ -24,10 +24,10 @@ console.log(mobileCheck());
 import { burger } from "./functions/burger";
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './functions/disable-scroll';
+// import { disableScroll } from "./functions/disable-scroll";
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './functions/enable-scroll';
+// import { enableScroll } from "./functions/enable-scroll";
 
 // Реализация модального окна
 
@@ -83,8 +83,10 @@ const swiper = new Swiper(".testimonials-slider", {
 });
 
 // Подключение анимаций по скроллу
-// import AOS from 'aos';
-// AOS.init();
+import AOS from "aos";
+AOS.init({
+  once: true, // whether animation should happen only once - while scrolling down
+});
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
@@ -95,12 +97,12 @@ const swiper = new Swiper(".testimonials-slider", {
 // const scroll = new SmoothScroll('a[href*="#"]');
 
 // Подключение событий свайпа на мобильных
-import "swiped-events";
-document.addEventListener("swiped", function (e) {
-  console.log(e.target);
-  console.log(e.detail);
-  console.log(e.detail.dir);
-});
+// import "swiped-events";
+// document.addEventListener("swiped", function (e) {
+//   console.log(e.target);
+//   console.log(e.detail);
+//   console.log(e.detail.dir);
+// });
 
 // import { validateForms } from './functions/validate-forms';
 // const rules1 = [...];
